@@ -1,0 +1,52 @@
+site_name: docs.getlocalcert.net
+site_url: https://docs.getlocalcert.net/
+site_description: Documentation for getlocalcert.net
+
+theme:
+  name: material
+  language: en
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+  icon:
+    admonition:
+      warning: octicons/alert-16
+
+plugins:
+  - search:
+      lang: en
+
+nav:
+  - 'index.md'
+  - 'Available domains':
+    - 'domains/localcert-net.md'
+    - 'domains/localhostcert-net.md'
+    - 'domains/corpnet-work.md'
+    - 'domains/bring-your-own-domain.md'
+  - 'Setting up ACME clients':
+    - 'acme-clients/index.md'
+    - 'acme-clients/lego.md'
+    - 'acme-clients/acme-sh.md'
+  - 'Setting up DNS':
+    - 'dns/index.md'
+    - 'dns/split-view.md'
+    - 'dns/managed.md'
+  - 'security.md'
+  - 'alternatives.md'
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+copyright: Copyright &copy; 2023 getlocalcert.net
+
+extra:
+  generator: false
+
+
