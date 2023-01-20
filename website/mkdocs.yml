@@ -6,6 +6,7 @@ theme:
   name: material
   custom_dir: overrides
   language: en
+  font: false
   features:
     - content.code.copy
     - navigation.instant
