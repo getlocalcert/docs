@@ -29,7 +29,7 @@ Finally, set some environmental variables and run `lego`:
 
 ``` bash
 export ACME_DNS_STORAGE_PATH=path/to/credentials.json
-export ACME_DNS_API_BASE=https://apiv1.getlocalcert.net/acme-dns-api/
+export ACME_DNS_API_BASE=https://console.getlocalcert.net/acme-dns-api/
 
 lego --email you@example.com --dns acme-dns --domains hostname.abc.localcert.net run
 ```

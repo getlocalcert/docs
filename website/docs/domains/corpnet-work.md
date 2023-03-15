@@ -1,5 +1,9 @@
 # .corpnet.work
 
+!!! warning "Unreleased"
+    
+    This feature has not been released yet.
+
 `.corpnet.work` is designed for corporate networks.
 
 Corporate networks often use the `.corp` top-level domain, even though this top-level domain hasn't been formally assigned this purpose.

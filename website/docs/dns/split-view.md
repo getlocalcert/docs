@@ -10,9 +10,6 @@ This internal DNS server should handle routing for all local-only domain names.
 A key benefit of this approach is that it ensures your subdomain names and IP addresses aren't leaked through DNS.
 This is a form of [security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity)
 
-One challenge with this approach is that software configured to use DNS-over-TLS or DNS-over-HTTPS, may not use the internal DNS server and will only see DNS responses from the external DNS server.
-Any software that uses this approach would need to be reconfigured to connect to the internal DNS server.
-
 Another challenge, is that a user who switches between networks will continue to use DNS settings for the previous network due to DNS caching on their system.
 This can cause a user who just connected to the internal network, perhaps via WiFi or VPN, to be unable to connect to the local-only domain.
 Similarly, a user who just disconnected from the internal network and is now on a different network will still try to connect to the internal website using the previously seen IP address.

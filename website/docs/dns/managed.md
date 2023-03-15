@@ -1,3 +1,7 @@
+!!! warning "Unreleased"
+
+    This feature has not been released yet.
+
 # Managed DNS
 
 getlocalcert can act as the sole authoritative DNS server for your domain.

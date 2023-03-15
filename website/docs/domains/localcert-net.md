@@ -1,5 +1,9 @@
 # .localcert.net
 
+!!! warning "Unreleased"
+    
+    This feature has not been released yet.
+
 ## Use Case
 
 * You are running an private, internal web service that's only accessible on your local machine, local network, virtual private network, or other non-Internet network.
@@ -11,11 +15,10 @@
 
 You can register a free domain under `.localcert.net`.
 Free domains use short auto-generated names, like `abc.localcert.net`.
-[Custom domain names](/custom-domain-names/) are available for a small fee.
 
 Registration of a domain allows you to set the `_acme-challenge` TXT record for the domain.
 These records are used to issue TLS certificates using the ACME DNS-01 protocol.
-You should use an [existing ACME client](/acme-clients/) to set these records.
+You should use an [ACME client](/acme-clients/) to set these records.
 
 You are unable to set any other public DNS records, such as `A`, `AAAA`, `MX`, `CNAME`, or `NS` records.
 This prevents your domain from hosting any Internet-facing content using the public, global DNS.

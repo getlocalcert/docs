@@ -9,7 +9,7 @@
     getlocalcert is currently available for early access.
     Feel free to try us out, but be aware that some breaking changes may occur and several known issues exist.
 
-[Get started for free](#){ .md-button .md-button--primary }
+[Get started for free](https://console.getlocalcert.net/){ .md-button .md-button--primary }
 
 Register a local-only domain name and automate issuance of domain verified certificates.
 Paired with automatic certificate management (ACME), internal websites can easily renew their certificates without manual process.

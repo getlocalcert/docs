@@ -5,7 +5,6 @@
 ## API Keys
 
 Make sure you have a getlocalcert API key for the domain you'd like to configure.
-An API key will be created every time you set up a subdomain, or manually as you need.
 
 ## Issue a certificate
 
@@ -13,7 +12,7 @@ Let's say you'd like to issue a new certificate for the `hostname` subdomain of 
 You can run:
 
 ``` bash
-export ACMEDNS_BASE_URL="https://auth.acme-dns.io"
+export ACMEDNS_BASE_URL="https://console.getlocalcert.net/acmedns-api/"
 export ACMEDNS_USERNAME="..."
 export ACMEDNS_PASSWORD="..."
 export ACMEDNS_SUBDOMAIN="hostname"
