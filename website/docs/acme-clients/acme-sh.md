@@ -12,7 +12,7 @@ Let's say you'd like to issue a new certificate for the `hostname` subdomain of 
 You can run:
 
 ``` bash
-export ACMEDNS_BASE_URL="https://console.getlocalcert.net/acmedns-api/"
+export ACMEDNS_BASE_URL="https://console.getlocalcert.net/acmedns-api-v1/"
 export ACMEDNS_USERNAME="..."
 export ACMEDNS_PASSWORD="..."
 export ACMEDNS_SUBDOMAIN="hostname"
