@@ -28,10 +28,12 @@ nav:
     - 'domains/bring-your-own-domain.md'
   - 'Setting up ACME clients':
     - 'acme-clients/index.md'
+    - 'acme-clients/caddy.md'
     - 'acme-clients/lego.md'
-    - 'acme-clients/acme-sh.md'
     - 'acme-clients/cert-manager.md'
     - 'acme-clients/traefik.md'
+    - 'acme-clients/acme-sh.md'
+    - 'acme-clients/certify-the-web.md'
   - 'Setting up DNS':
     - 'dns/index.md'
     - 'dns/split-view.md'
