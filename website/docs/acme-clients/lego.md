@@ -5,7 +5,6 @@
 ## API Keys
 
 Make sure you have a getlocalcert API key for the domain you'd like to configure.
-An API key will be created every time you set up a subdomain, or manually as you need.
 
 ## Issue a certificate
 
@@ -29,7 +28,7 @@ Finally, set some environmental variables and run `lego`:
 
 ``` bash
 export ACME_DNS_STORAGE_PATH=path/to/credentials.json
-export ACME_DNS_API_BASE=https://console.getlocalcert.net/acmedns-api-v1/
+export ACME_DNS_API_BASE=https://api.getlocalcert.net/api/acmedns/v1
 
 lego --email you@example.com --dns acme-dns --domains hostname.abc.localcert.net run
 ```

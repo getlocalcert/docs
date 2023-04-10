@@ -14,7 +14,7 @@ As such, each application should manage it's TLS certificates using an API key s
 ## Setting TXT records
 
 The getlocalcert API is compatible with the ACMEDNS API for managing TXT records.
-Clients like [LEGO](TODO) and [acme.sh](TODO) can be used to manage records.
+Clients like [LEGO](./lego/) and [acme.sh](./acme-sh/) can be used to manage records.
 
 You'll need to set:
 * endpoint: apiv1.getlocalcert.net

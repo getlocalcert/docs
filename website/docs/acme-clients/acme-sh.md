@@ -12,10 +12,10 @@ Let's say you'd like to issue a new certificate for the `hostname` subdomain of 
 You can run:
 
 ``` bash
-export ACMEDNS_BASE_URL="https://console.getlocalcert.net/acmedns-api-v1/"
-export ACMEDNS_USERNAME="..."
-export ACMEDNS_PASSWORD="..."
-export ACMEDNS_SUBDOMAIN="hostname"
+export ACMEDNS_BASE_URL="https://api.getlocalcert.net/api/acmedns/v1"
+export ACMEDNS_USERNAME="yourApiKeyId"
+export ACMEDNS_PASSWORD="yourApiKeySecret"
+export ACMEDNS_SUBDOMAIN="yourSubdomain"
 
 ./acme.sh --issue --dns dns_acmedns -d hostname.abc.localcert.net
 ```
