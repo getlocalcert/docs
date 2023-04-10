@@ -7,14 +7,14 @@
 If you haven't already, setup an API key for your subdomain in [the console](https://console.getlocalcert.net/).
 Save your subdomain information and credentials to a JSON file like this:
 
-  {
-    "username": "<yourApiKeyId>",
-    "password": "<yourApiKeySecret>",
-    "fulldomain": "<yourSubdomain>.localhostcert.net",
-    "subdomain": "<yourSubdomain>",
-    "server_url": "https://api.getlocalcert.net/api/acmedns/v1",
-    "allowfrom": []
-  }
+    {
+      "username": "<yourApiKeyId>",
+      "password": "<yourApiKeySecret>",
+      "fulldomain": "<yourSubdomain>.localhostcert.net",
+      "subdomain": "<yourSubdomain>",
+      "server_url": "https://api.getlocalcert.net/api/acmedns/v1",
+      "allowfrom": []
+    }
 
 ## Build Caddy
 
@@ -35,14 +35,14 @@ If you're using split view DNS, set `resolvers` to an external DNS servers.
 Otherwise, Caddy won't be able to see that the TXT records have been set.
 If you're not using split view DNS, you can skip that line.
 
-  <yourSubdomain>.localhostcert.net {
-    resolvers 8.8.8.8:53 8.8.4.4:53
-    tls {
-      ca https://acme-staging-v02.api.letsencrypt.org/directory
-      dns acmedns credentials.json
+    <yourSubdomain>.localhostcert.net {
+      resolvers 8.8.8.8:53 8.8.4.4:53
+      tls {
+        ca https://acme-staging-v02.api.letsencrypt.org/directory
+        dns acmedns credentials.json
+      }
+      respond "Hello"
     }
-    respond "Hello"
-  }
 
 Replace `<yourSubdomain>` with your subdomain name.
 
