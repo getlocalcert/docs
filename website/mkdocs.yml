@@ -30,12 +30,15 @@ nav:
     - 'acme-clients/index.md'
     - 'acme-clients/lego.md'
     - 'acme-clients/acme-sh.md'
+    - 'acme-clients/cert-manager.md'
+    - 'acme-clients/traefik.md'
   - 'Setting up DNS':
     - 'dns/index.md'
     - 'dns/split-view.md'
     - 'dns/managed.md'
   - 'security.md'
   - 'alternatives.md'
+  - 'contact.md'
 
 markdown_extensions:
   - attr_list
