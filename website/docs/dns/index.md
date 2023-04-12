@@ -1,7 +1,7 @@
 # General guidance
 
 If you are using a `.localhostcert.net` domain, you don't need any further setup.
-Domains under `.localhostcert.net` are all configured to point to `127.0.0.1` and `::1` only.
+Domains under `.localhostcert.net` are all configured to point to `127.0.0.1` only.
 
 Other domains require additional DNS configuration.
 
