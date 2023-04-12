@@ -26,6 +26,7 @@ nav:
     - 'domains/localhostcert-net.md'
     - 'domains/corpnet-work.md'
     - 'domains/bring-your-own-domain.md'
+  - 'records/index.md'
   - 'Setting up ACME clients':
     - 'acme-clients/index.md'
     - 'acme-clients/caddy.md'
