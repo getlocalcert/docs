@@ -34,12 +34,15 @@ nav:
     - 'acme-clients/traefik.md'
     - 'acme-clients/acme-sh.md'
     - 'acme-clients/certify-the-web.md'
+  - 'Choosing a certificate authority':
+    - 'cas/zerossl.md'
   - 'Setting up DNS':
     - 'dns/index.md'
     - 'dns/split-view.md'
     - 'dns/managed.md'
   - 'security.md'
   - 'alternatives.md'
+  - 'faq.md'
   - 'contact.md'
 
 markdown_extensions:
@@ -50,6 +53,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - footnotes
 
 copyright: Copyright &copy; 2023 getlocalcert.net
 
