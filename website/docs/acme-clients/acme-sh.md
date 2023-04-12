@@ -4,12 +4,12 @@
 
 ## API Keys
 
-Make sure you have a getlocalcert API key for the domain you'd like to configure.
+If you haven't already, setup an API key for your subdomain in [the console](https://console.getlocalcert.net/).
 
 ## Issue a certificate
 
-Let's say you'd like to issue a new certificate for the `hostname` subdomain of your `abc.localcert.net` domain.
-You can run:
+As you begin, start with Let's Encrypt's staging environment (`--staging`).
+Let's Encrypt's production environment has [rate limits](https://letsencrypt.org/docs/rate-limits/), so it's best to avoid using it until you've tested in the staging environment.
 
 ``` bash
 export ACMEDNS_BASE_URL="https://api.getlocalcert.net/api/acmedns/v1"
@@ -17,8 +17,15 @@ export ACMEDNS_USERNAME="yourApiKeyId"
 export ACMEDNS_PASSWORD="yourApiKeySecret"
 export ACMEDNS_SUBDOMAIN="yourSubdomain"
 
-./acme.sh --issue --dns dns_acmedns -d hostname.abc.localcert.net
+acme.sh --issue \
+        --dns dns_acmedns \
+        -d <yourSubdomain>.localhostcert.net \
+        --staging
 ```
 
-Where `ACMEDNS_USERNAME` is your API key ID and `ACMEDNS_PASSWORD` is the API key secret.
+If everything succeeded, you'll see that a certificate was issued.
+You can now run again without the `--staging` argument to use the Let's Encrypt production environment.
+
+Checkout the [acme.sh docs](https://github.com/acmesh-official/acme.sh/wiki)
+for more information about copying these certificates to your web server and automating certificate renewals.
 

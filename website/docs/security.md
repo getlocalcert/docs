@@ -16,6 +16,8 @@ Each web application will need an API key to manage its `_acme-challenge` TXT re
 While many DNS APIs provide API keys with broad scope, getlocalcert API keys are scoped to a single subdomain.
 This ensures that a security issue compromising the API keys of a single web application you manage cannot turn into a larger takeover of your other DNS records.
 
+getlocalcert implements granular permissions using the same API as [acme-dns](https://www.eff.org/deeplinks/2018/02/technical-deep-dive-securing-automation-acme-dns-challenge-validation).
+
 ## Public Suffix List
 
 Our domains are pending addition to the [Public Suffix List](https://publicsuffix.org/), which is the main tool used to identify which parts of a fully qualified domain name are public and which are available for registration to other parties.

@@ -2,13 +2,22 @@
 
 [Traefik](https://traefik.io/traefik/) is a cloud native application proxy.
 
-## API Keys
+!!! warning "Untested"
 
-Make sure you have a getlocalcert API key for the domain you'd like to configure.
+    This page needs review
 
 ## Issue a certificate
 
-TODO
+``` yaml
+certificatesResolvers:
+  myresolver:
+    acme:
+      dnsChallenge:
+        provider: acme-dns
+```
 
-See: https://doc.traefik.io/traefik/https/acme/#dnschallenge
+
+See also:
+
+* https://doc.traefik.io/traefik/https/acme/#dnschallenge
 

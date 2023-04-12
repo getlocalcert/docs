@@ -28,7 +28,7 @@ This means that a hacker or disgruntled employee with access to the private CA c
 Further, user-imported CA certs are handled in inconsistent and surprising ways.
 The same browser may behave differently on different operating systems, based on OS-level TLS feature support.
 For example, a user-imported CA cert is [trusted past it's expiration](https://bugs.chromium.org/p/chromium/issues/detail?id=1072083&q=trust%20root%20expiration&can=2) on Chrome, by design.
-Feature support like RFC 5280 "Name Constraints", which seeks to scope a CA cert to a specific namespace, is [poor but growing](https://netflixtechblog.com/bettertls-c9915cd255c0?gi=d6fcf982d4ac).
+Feature support like RFC 5280 "Name Constraints", which seeks to scope a CA cert to a specific namespace, is [poor but growing](https://alexsci.com/blog/name-non-constraint/).
 Tooling for creating CA certs are often [missing important security features](https://github.com/FiloSottile/mkcert/issues/302).
 
 ## Bring your own domain

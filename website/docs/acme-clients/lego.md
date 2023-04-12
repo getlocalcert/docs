@@ -4,35 +4,45 @@
 
 ## API Keys
 
-Make sure you have a getlocalcert API key for the domain you'd like to configure.
-
-## Issue a certificate
-
-Let's say you'd like to issue a new certificate for the `hostname` subdomain of your `abc.localcert.net` domain.
-
-First, setup a credentials.json file:
+If you haven't already, setup an API key for your subdomain in [the console](https://console.getlocalcert.net/).
+Save your subdomain information and credentials to a JSON file like this:
 
 ``` json title="credentials.json"
 {
-    "fulldomain": "hostname.abc.localcert.net",
-    "subdomain" : "hostname",
-    "username"  : "...",
-    "password"  : "...",
+  "username": "<yourApiKeyId>",
+  "password": "<yourApiKeySecret>",
+  "fulldomain": "<yourSubdomain>.localhostcert.net",
+  "subdomain": "<yourSubdomain>",
+  "server_url": "https://api.getlocalcert.net/api/acmedns/v1",
+  "allowfrom": []
 }
 ```
 
-Where `username` is your API key ID and `password` is the API key secret.
 Protect this file as it contains a secret key.
 
-Finally, set some environmental variables and run `lego`:
+## Issue a certificate
+
+As you begin, start with Let's Encrypt's staging environment as the `--server`.
+Let's Encrypt's production environment has [rate limits](https://letsencrypt.org/docs/rate-limits/), so it's best to avoid using it until you've tested in the staging environment.
 
 ``` bash
-export ACME_DNS_STORAGE_PATH=path/to/credentials.json
+export ACME_DNS_STORAGE_PATH=credentials.json
 export ACME_DNS_API_BASE=https://api.getlocalcert.net/api/acmedns/v1
-
-lego --email you@example.com --dns acme-dns --domains hostname.abc.localcert.net run
+lego --accept-tos \
+     --email you@example.com \
+     --dns acme-dns \
+     --domains <yourSubdomain>.localhostcert.net \
+     --server https://acme-staging-v02.api.letsencrypt.org/directory \
+     --dns.resolvers 8.8.8.8
+     run
 ```
 
+TODO: This tries to register an account, even though credentials.json has a value.
 
+Replace `<yourSubdomain>` with your subdomain name.
 
+If everything succeeded, you'll see that a certificate was issued.
+You can now run again without the `--server` argument to use the Let's Encrypt production environment.
+
+Checkout the [LEGO docs](https://go-acme.github.io/lego/) for more information about copying these certificates to your web server and automating certificate renewals.
 
