@@ -13,7 +13,7 @@ Save your subdomain information and credentials to a JSON file like this:
   "password": "<yourApiKeySecret>",
   "fulldomain": "<yourSubdomain>.localhostcert.net",
   "subdomain": "<yourSubdomain>",
-  "server_url": "https://api.getlocalcert.net/api/acmedns/v1",
+  "server_url": "https://api.getlocalcert.net/api/v1/acme-dns-compat",
   "allowfrom": []
 }
 ```

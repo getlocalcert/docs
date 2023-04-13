@@ -9,7 +9,7 @@
 ## Issue a certificate
 
 1. Select acme-dns as the DNS update method.
-2. Enter https://api.getlocalcert.net/api/acmedns/v1 as the server
+2. Enter https://api.getlocalcert.net/api/v1/acme-dns-compat as the server
 3. Click Request Certificate
 4. Skip the CNAME step, you won't need it
 

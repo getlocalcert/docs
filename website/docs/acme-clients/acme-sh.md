@@ -12,7 +12,7 @@ As you begin, start with Let's Encrypt's staging environment (`--staging`).
 Let's Encrypt's production environment has [rate limits](https://letsencrypt.org/docs/rate-limits/), so it's best to avoid using it until you've tested in the staging environment.
 
 ``` bash
-export ACMEDNS_BASE_URL="https://api.getlocalcert.net/api/acmedns/v1"
+export ACMEDNS_BASE_URL="https://api.getlocalcert.net/api/v1/acme-dns-compat"
 export ACMEDNS_USERNAME="yourApiKeyId"
 export ACMEDNS_PASSWORD="yourApiKeySecret"
 export ACMEDNS_SUBDOMAIN="yourSubdomain"

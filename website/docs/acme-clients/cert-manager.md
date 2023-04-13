@@ -18,7 +18,7 @@ spec:
     solvers:
     - dns01:
         acmeDNS:
-          host: https://api.getlocalcert.net/api/acmedns/v1
+          host: https://api.getlocalcert.net/api/v1/acme-dns-compat
           accountSecretRef:
             name: acme-dns
             key: credentials.json

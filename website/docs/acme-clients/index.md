@@ -18,17 +18,19 @@ You can create one like:
   "password": "<yourApiKeySecret>",
   "fulldomain": "<yourSubdomain>.localhostcert.net",
   "subdomain": "<yourSubdomain>",
-  "server_url": "https://api.getlocalcert.net/api/acmedns/v1",
+  "server_url": "https://api.getlocalcert.net/api/v1/acme-dns-compat",
   "allowfrom": []
 }
 ```
 
 Protect this file as it contains a secret key.
 
+allowfrom is part of the acme-dns service, but is not used by getlocalcert.
+
 ## Setting TXT records
 
-The getlocalcert API is compatible with the [acme-dns](https://github.com/joohoi/acme-dns) API for managing TXT records.
-Many ACME clients are compatible with this API.
+getlocalcert has a compatibility API for the [acme-dns](https://github.com/joohoi/acme-dns) service's API for managing TXT records.
+Many ACME clients are compatible with the acme-dns API, and this is the recommended way to integrate with getlocalcert.
 See the sidebar for specific instructions for several tools.
 
 You can also set the ACME DNS-01 challenge response record manually through the getlocalcert web console, although you'll have a much better experience using an existing automated client.

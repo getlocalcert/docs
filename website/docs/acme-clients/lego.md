@@ -13,7 +13,7 @@ Save your subdomain information and credentials to a JSON file like this:
   "password": "<yourApiKeySecret>",
   "fulldomain": "<yourSubdomain>.localhostcert.net",
   "subdomain": "<yourSubdomain>",
-  "server_url": "https://api.getlocalcert.net/api/acmedns/v1",
+  "server_url": "https://api.getlocalcert.net/api/v1/acme-dns-compat",
   "allowfrom": []
 }
 ```
@@ -27,7 +27,7 @@ Let's Encrypt's production environment has [rate limits](https://letsencrypt.org
 
 ``` bash
 export ACME_DNS_STORAGE_PATH=credentials.json
-export ACME_DNS_API_BASE=https://api.getlocalcert.net/api/acmedns/v1
+export ACME_DNS_API_BASE=https://api.getlocalcert.net/api/v1/acme-dns-compat
 lego --accept-tos \
      --email you@example.com \
      --dns acme-dns \
