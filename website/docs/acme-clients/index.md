@@ -9,6 +9,8 @@ If you haven't already, setup an API key for your subdomain in [the console](htt
 The getlocalcert API uses API keys that are locked to a single subdomain.
 You'll use your API key to update a DNS record as part of the certificate issuance process.
 
+### JSON credentials file
+
 Several ACME clients support reading credentials from a JSON file.
 You can create one like:
 
@@ -25,7 +27,7 @@ You can create one like:
 
 Protect this file as it contains a secret key.
 
-allowfrom is part of the acme-dns service, but is not used by getlocalcert.
+allowfrom is part of the [acme-dns service](https://github.com/joohoi/acme-dns), but is not used by getlocalcert.
 
 ## Setting TXT records
 
