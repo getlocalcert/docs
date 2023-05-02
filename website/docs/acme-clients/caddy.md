@@ -35,15 +35,15 @@ Note: the second `--with` is a workaround for [a known issue](https://github.com
 As you begin, start with Let's Encrypt's staging environment as the `ca`.
 Let's Encrypt's production environment has [rate limits](https://letsencrypt.org/docs/rate-limits/), so it's best to avoid using it until you've tested in the staging environment.
 
-If you're using split view DNS, set `resolvers` to an external DNS servers.
-Otherwise, Caddy won't be able to see that the TXT records have been set.
+If you're using split view DNS, set `resolvers` to an external DNS server (like Google's `8.8.8.8:53`) or the getlocalcert.net DNS server (`ns1.getlocalcert.net`).
+Otherwise, Caddy won't be able to see that the TXT records have been set and it won't proceed with certificate issuance.
 If you're not using split view DNS, you can skip that line.
 
 ``` text title="Caddyfile"
 <yourSubdomain>.localhostcert.net {
-  resolvers 8.8.8.8:53 8.8.4.4:53
   tls {
     ca https://acme-staging-v02.api.letsencrypt.org/directory
+    resolvers ns1.getlocalcert.net:53
     dns acmedns credentials.json
   }
   respond "Hello"
