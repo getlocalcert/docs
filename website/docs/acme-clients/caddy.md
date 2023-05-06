@@ -1,3 +1,8 @@
+---
+title: Integrate Caddy with getlocalcert.net
+summary: How to integrate Caddy with getlocalcert.net
+---
+
 # Caddy
 
 [Caddy](https://caddyserver.com/) is a modern web server with built-in automatic HTTPS support.

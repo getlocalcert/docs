@@ -1,3 +1,8 @@
+---
+title: Set up localhostcert.net domains
+summary: How to set up localhostcert.net domains
+---
+
 # .localhostcert.net
 
 ## Use Case

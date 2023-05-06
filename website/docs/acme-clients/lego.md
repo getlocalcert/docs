@@ -1,3 +1,8 @@
+---
+title: Integrate Let's Encrypt Go (LEGO) with getlocalcert.net
+summary: How to integrate Let's Encrypt Go (LEGO) with getlocalcert.net
+---
+
 # LEGO
 
 [LEGO](https://github.com/go-acme/lego) is a Let's Encrypt ACME client written in go.

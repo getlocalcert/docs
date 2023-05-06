@@ -1,3 +1,8 @@
+---
+title: Set up split-DNS with getlocalcert.net
+summary: How to configure split-DNS with getlocalcert.net domains
+---
+
 # Split-View DNS
 
 Split-view DNS involves an external DNS server and an internal DNS server which return different responses.

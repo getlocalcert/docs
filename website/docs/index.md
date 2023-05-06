@@ -1,8 +1,13 @@
+---
+title: getlocalcert.net Documentation
+summary: This is the documentation site for getlocalcert.net
+---
+
 # About
 
 **Get valid HTTPS certificates for your local network in just ten minutes!**
 
-[getlocalcert.net](https://getlocalcert.net) lets you easily deploy Let's Encrypt HTTPS certificates to internal web apps.
+[getlocalcert.net](https://www.getlocalcert.net) lets you easily deploy Let's Encrypt HTTPS certificates to internal web apps.
 
 !!! warning "Early Access"
     

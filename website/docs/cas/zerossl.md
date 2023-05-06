@@ -1,3 +1,8 @@
+---
+title: Setting up ZeroSSL with getlocalcert.net
+summary: How to set up ZeroSSL with getlocalcert.net
+---
+
 # ZeroSSL Setup
 
 [ZeroSSL](https://zerossl.com/documentation/acme/?fpr=getlocalcert&fp_sid=docsca)[^1] offers free 90-day TLS certificates without any rate limit.

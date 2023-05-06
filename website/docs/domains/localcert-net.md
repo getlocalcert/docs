@@ -1,3 +1,8 @@
+---
+title: Set up localcert.net domains
+summary: How to set up localcert.net domains
+---
+
 # .localcert.net
 
 !!! warning "Unreleased"

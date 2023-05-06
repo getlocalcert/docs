@@ -1,3 +1,8 @@
+---
+title: Alternatives to getlocalcert.net
+summary: You may be able to use getlocalcert.net as an alternative to these technologies
+---
+
 # Alternatives
 
 ## Why not self-signed certificates?

@@ -1,3 +1,8 @@
+---
+title: Default records for getlocalcert.net domains
+summary: Information about default DNS records on getlocalcert.net domains
+---
+
 # Default Records
 
 getlocalcert initializes your subdomain with several default DNS records.

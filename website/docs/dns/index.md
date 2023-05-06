@@ -1,3 +1,8 @@
+---
+title: getlocalcert.net DNS set up guidance
+summary: How to manage DNS with getlocalcert.net
+---
+
 # General guidance
 
 If you are using a `.localhostcert.net` domain, you don't need any further setup.

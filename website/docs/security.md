@@ -1,3 +1,8 @@
+---
+title: getlocalcert.net security
+summary: Security features and security model of getlocalcert.net
+---
+
 # Security
 
 ## Designed for security

@@ -1,4 +1,9 @@
-# External Validation Domains
+---
+title: Using getlocalcert.net domains as ACME-challenge delegates
+summary: How to configure getlocalcert.net domains as ACME-challenge delegate subdomain
+---
+
+# ACME-challenge delegate subdomains
 
 ## The problem
 
@@ -9,7 +14,7 @@ Some DNS servers don't have APIs and those that do may provide overly broad perm
 
 The ACME DNS-01 protocol allows a domain to set a `_acme-challenge` `CNAME` record instead of a `TXT` record.
 The CNAME record should point to a different domain, such as one managed by getlocalcert.
-This external validation domain will host the `TXT` record containing the challenge response.
+The pointed-to domain is known as an "ACME-challenge delegate" and it will host the `TXT` record containing the challenge response.
 With this setup, the existing DNS server only needs to manage a static `CNAME` record and the latter DNS server's API is used to dynamically update the `TXT` record each time a certificate is issued.
 
 This `CNAME` record only impacts the `_acme-challenge` record.
@@ -31,7 +36,7 @@ Automate renewal and you're all set.
 ## Security
 
 You need to trust any DNS server you use to provide strong security properties.
-When using an external validation domain, a security issue could allow an attacker to trick a CA into issuing certificates for your domain.
+When using an ACME-challenge delegate, a security issue could allow an attacker to trick a CA into issuing certificates for your domain.
 getlocalcert takes a [security-first](/security/) approach to protect against attack, but there's additional steps you can take to further protect your systems.
 
 ## CAA records
@@ -44,14 +49,14 @@ A full CAA record should look like:
 
     example.com.    CAA    0 issue "letsencrypt.org; accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/123456789"
 
-Once configured, your CAA record will protect you from security issues at your external validation domain.
+Once configured, your CAA record will protect you from security issues at your ACME-challenge delegate domain.
 This is sort of like two factor authentication for certificate issuance.
 
 
 ## Certificate transparency logs
 
 Additionally, you can [monitor](/security/#Monitor-certificate-transparency-logs) certificate transparency logs to detect any misissuance of certificates for your domain.
-If you quickly detect a misissued certificate, you can quickly revoke it and investigate.
+If you detect a misissued certificate, you can quickly revoke it and investigate.
 
 ## Self-hosting
 

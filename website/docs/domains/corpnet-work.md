@@ -1,3 +1,8 @@
+---
+title: Set up a corpnet.work domain
+summary: How to set up a corpnet.work domain
+---
+
 # .corpnet.work
 
 !!! warning "Unreleased"
