@@ -1,5 +1,5 @@
 ---
-title: Integrate cert-manager with getlocalcert.net
+title: cert-manager
 summary: How to integrate cert-manager with getlocalcert.net
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: getlocalcert.net ACME client documentation
+title: ACME clients
 summary: How to configure ACME clients for getlocalcert.net
 ---
 
