@@ -1,5 +1,5 @@
 ---
-title: Integrate Traefik with getlocalcert.net
+title: Traefik
 summary: How to integrate Traefik with getlocalcert.net
 ---
 

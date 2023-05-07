@@ -1,5 +1,5 @@
 ---
-title: Using getlocalcert.net domains as ACME-challenge delegates
+title: ACME-challenge delegates
 summary: How to configure getlocalcert.net domains as ACME-challenge delegate subdomain
 ---
 

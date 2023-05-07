@@ -1,5 +1,5 @@
 ---
-title: getlocalcert.net managed DNS
+title: Managed DNS
 summary: How to configure getlocalcert.net on managed DNS domains
 ---
 

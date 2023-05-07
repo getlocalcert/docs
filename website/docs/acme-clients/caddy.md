@@ -1,5 +1,5 @@
 ---
-title: Integrate Caddy with getlocalcert.net
+title: Caddy
 summary: How to integrate Caddy with getlocalcert.net
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Set up split-DNS with getlocalcert.net
-summary: How to configure split-DNS with getlocalcert.net domains
+title: Split-view DNS
+summary: How to configure split-view DNS with getlocalcert.net domains
 ---
 
 # Split-View DNS

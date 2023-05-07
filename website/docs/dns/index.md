@@ -1,5 +1,5 @@
 ---
-title: getlocalcert.net DNS set up guidance
+title: General DNS guidance
 summary: How to manage DNS with getlocalcert.net
 ---
 

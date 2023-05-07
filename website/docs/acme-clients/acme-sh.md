@@ -1,5 +1,5 @@
 ---
-title: Integrate acme.sh with getlocalcert.net
+title: acme.sh
 summary: How to integrate acme.sh with getlocalcert.net
 ---
 

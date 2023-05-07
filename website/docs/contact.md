@@ -1,5 +1,5 @@
 ---
-title: getlocalcert.net Contact
+title: Contact
 summary: Contact information for feedback, questions, and support issues.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Default records for getlocalcert.net domains
+title: Default records
 summary: Information about default DNS records on getlocalcert.net domains
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Setting up ZeroSSL with getlocalcert.net
+title: Setting up ZeroSSL
 summary: How to set up ZeroSSL with getlocalcert.net
 ---
 

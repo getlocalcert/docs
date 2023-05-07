@@ -1,5 +1,5 @@
 ---
-title: Set up localcert.net domains
+title: localcert.net
 summary: How to set up localcert.net domains
 ---
 

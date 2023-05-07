@@ -1,5 +1,5 @@
 ---
-title: Integrate Let's Encrypt Go (LEGO) with getlocalcert.net
+title: Let's Encrypt Go (LEGO)
 summary: How to integrate Let's Encrypt Go (LEGO) with getlocalcert.net
 ---
 

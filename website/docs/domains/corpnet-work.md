@@ -1,5 +1,5 @@
 ---
-title: Set up a corpnet.work domain
+title: corpnet.work
 summary: How to set up a corpnet.work domain
 ---
 

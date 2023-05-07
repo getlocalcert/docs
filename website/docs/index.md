@@ -1,5 +1,5 @@
 ---
-title: getlocalcert.net Documentation
+title: Documentation
 summary: This is the documentation site for getlocalcert.net
 ---
 

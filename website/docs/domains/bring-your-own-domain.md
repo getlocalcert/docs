@@ -1,5 +1,5 @@
 ---
-title: getlocalcert.net - Bring your own domain
+title: Bring your own domain
 summary: How to configure your existing domain on getlocalcert.net
 ---
 

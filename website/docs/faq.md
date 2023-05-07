@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions
+title: FAQ
 summary: Frequently asked questions (FAQ) about getlocalcert.net
 ---
 

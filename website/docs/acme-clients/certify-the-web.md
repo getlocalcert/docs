@@ -1,5 +1,5 @@
 ---
-title: Integrate Certify The Web with getlocalcert.net
+title: Certify The Web
 summary: How to integrate Certify The web with getlocalcert.net
 ---
 
