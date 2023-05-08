@@ -47,6 +47,7 @@ nav:
   - 'alternatives.md'
   - 'faq.md'
   - 'contact.md'
+  - 'privacy.md'
 
 markdown_extensions:
   - attr_list
