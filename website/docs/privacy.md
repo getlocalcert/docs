@@ -105,5 +105,5 @@ We hope that the Service's design and policies reduce the need for such requests
 
 ## Contact
 
-If you have any questions, please [https://docs.getlocalcert.net/contact/](let us know).
+If you have any questions, please [let us know](https://docs.getlocalcert.net/contact/).
 
