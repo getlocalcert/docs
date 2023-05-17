@@ -1,0 +1,190 @@
+openapi: 3.1.0
+info:
+  title: getlocalcert.net API
+  description: |-
+    This is the API specification for the getlocalcert.net service
+
+  contact:
+    email: getlocalcert@robalexdev.com
+  version: 1.0.0
+externalDocs:
+  description: Documentation
+  url: https://docs.getlocalcert.net/
+servers:
+  - url: https://api.getlocalcert.net
+  - url: http://api.getlocalcert.net
+tags:
+  - name: acme-dns compat
+    description: Compatibility layer for acme-dns
+  - name: Utility
+    description: Helper APIs
+paths:
+  /api/v1/health:
+    get:
+      tags:
+        - Utility
+      summary: A health check
+      description: Check if the API is online and healthy
+      operationId: getHealth
+      parameters: []
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+
+  /api/v1/check:
+    get:
+      tags:
+        - Utility
+      summary: Check an API key
+      description: Determine if an API key is enabled and which subdomain it supports
+      operationId: getKeyInfo
+      parameters: []
+      responses:
+        '200':
+          description: Key is valid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckKey'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JsonError'
+
+  /api/v1/acme-dns-compat/health:
+    get:
+      tags:
+        - acme-dns compat
+      summary: acme-dns style health check
+      description: Check health using acme-dns compatability layer
+      operationId: getAcmeDnsHealth
+      parameters: []
+      responses:
+        '200':
+          description: Service is healthy
+
+  /api/v1/acme-dns-compat/update:
+    post:
+      tags:
+        - acme-dns compat
+      summary: Update _acme-challenge TXT record for a subdomain
+      description: Adds a new _acme-challenge TXT record on the domain and removes the oldest if there's already two records present
+      operationId: postAcmeDnsUpdate
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/AcmeDnsUpdate'
+      responses:
+        '200':
+          description: The TXT record was updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AcmeDnsUpdate'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JsonError'
+                
+  /api/v1/acme-dns-compat/register:
+    post:
+      tags:
+        - acme-dns compat
+      summary: Register a random subdomain
+      description: Registers a subdomain and retrieves API keys
+      operationId: postAcmeDnsRegister
+      parameters: []
+      responses:
+        '200':
+          description: The TXT record was updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AcmeDnsRegister'
+
+components:
+  schemas:
+    CheckKey:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Currently always `ok`
+          example: ok
+        domain:
+          type: string
+          description: The FQDN of the subdomain this key can manage
+          example: example.localhostcert.net
+    JsonError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: An error message
+          example: Unauthorized
+    AcmeDnsUpdate:
+      type: object
+      properties:
+        txt:
+          type: string
+          description: The TXT record value that was set
+          example: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    AcmeDnsRegister:
+      type: object
+      properties:
+        username:
+          type: string
+          description: The API key ID
+          example: babe7cb1-bcbe-42ee-a73c-09103df59242
+        password:
+          type: string
+          description: The API key secret
+          example: invalidac28a6813cac48559911c09b2ecd2f6d
+        subdomain:
+          type: string
+          description: The subdomain name that was newly created
+          example: 01a29c43-14da-42de-8a96-e178254947d7
+        fulldomain:
+          type: string
+          description: The fully qualified domain name
+          example: 01a29c43-14da-42de-8a96-e178254947d7.localhostcert.net
+        allowfrom:
+          type: array
+          description: An unused field, included for acme-dns API compatability
+          example: []
+    Health:
+      type: object
+      properties:
+        healthy:
+          description: true if the service is healthy
+          type: boolean
+  requestBodies:
+    AcmeDnsUpdate:
+      description: The following example updates the _acme-challenge.example.localhostcert.net TXT record to include the ACME DNS-01 challenge response. The provided `subdomain` must correspond to the subdomain connected to the API key (see /api/v1/check to determine the subdomain).
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              subdomain:
+                type: string
+                example: example
+              txt:
+                type: string
+                example: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+  # TODO: acme-dns isn't OpenAPI compatible, can we fix that?
+  # Until then, support basic auth in getlocalcert as a fallback
+  securitySchemes:
+    api_key:
+      type: http
+      scheme: basic
+

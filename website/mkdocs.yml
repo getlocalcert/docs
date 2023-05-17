@@ -43,6 +43,7 @@ nav:
     - 'dns/managed.md'
   - 'Tips':
     - 'tips/validation-domain.md'
+  - 'api/index.md'
   - 'security.md'
   - 'alternatives.md'
   - 'faq.md'
