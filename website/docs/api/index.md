@@ -7,5 +7,5 @@ summary: The API specification for getlocalcert.net
 
 You can browse the [API spec as HTML](/api/getlocalcert-api.html){:target="\_blank"}.
 
-Or you and [download the Swagger spec](/api/getlocalcert.yml).
+Or you and [download the OpenAPI spec](/api/getlocalcert.yml).
 
