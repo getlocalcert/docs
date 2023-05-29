@@ -40,12 +40,8 @@ LEGO uses a slightly different format to manage these keys:
 
 You can convert from a `credentials.json` file to a `lego-creds.json` file using:
 
-``` bash title="convert.sh"
-echo '{'                        >  lego-creds.json
-jq .fulldomain credentials.json >> lego-creds.json
-echo -n ':'                     >> lego-creds.json
-cat credentials.json            >> lego-creds.json
-echo "}"                        >> lego-creds.json
+``` bash
+jq '{ (.fulldomain) : (.) }' credentials.json > lego-creds.json
 ```
 
 This instructs LEGO to use your subdomain as the verification domain.
@@ -53,22 +49,24 @@ This instructs LEGO to use your subdomain as the verification domain.
 Protect these files as they contain secrets.
 
 
-## Issue a certificate
+## Register a subdomain and issue a certificate
 
 As you begin, start with Let's Encrypt's staging environment as the `--server`.
 Let's Encrypt's production environment has [rate limits](https://letsencrypt.org/docs/rate-limits/), so it's best to avoid using it until you've tested in the staging environment.
 The following command issues a certificate that's valid for both your subdomain and all child subdomains (I.E. a wildcard certificate).
 
 ``` bash
-export ACME_DNS_STORAGE_PATH=lego-creds.json
 export ACME_DNS_API_BASE=https://api.getlocalcert.net/api/v1/acme-dns-compat
-export ACME_DNS_FULLDOMAIN=$(jq .fulldomain credentials.json)
-lego \
+export ACMEDNS_FULLDOMAIN=subdomain.localhostcert.net
+export ACMEDNS_EMAIL=me@example.com
+export ACME_DNS_STORAGE_PATH=creds.json
+
+./lego \
   --accept-tos \
-  --email you@example.com \
+  --email ${ACMEDNS_EMAIL} \
   --dns acme-dns \
-  --domains ${ACME_DNS_FULLDOMAIN} \
-  --domains *.${ACME_DNS_FULLDOMAIN} \
+  --domains ${ACMEDNS_FULLDOMAIN} \
+  --domains *.${ACMEDNS_FULLDOMAIN} \
   --server https://acme-staging-v02.api.letsencrypt.org/directory \
   run
 ```
@@ -76,5 +74,9 @@ lego \
 If everything succeeded, you'll see that a certificate was issued.
 You can now run again without the `--server` argument to use the Let's Encrypt production environment.
 
-Checkout the [LEGO docs](https://go-acme.github.io/lego/) for more information about copying these certificates to your web server and automating certificate renewals.
+Check out the [LEGO docs](https://go-acme.github.io/lego/) for more information about copying these certificates to your web server and automating certificate renewals.
+
+You can see our integration test example [here](https://github.com/robalexdev/getlocalcert-client-tests/blob/main/examples/lego/register-and-issue.sh).
+
+[![Register and Issue using LEGO](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/lego.yml/badge.svg)](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/lego.yml)
 

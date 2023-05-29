@@ -30,5 +30,5 @@ available at https://community.certifytheweb.com/
 
 See also:
 
-* https://docs.certifytheweb.com/docs/dns/providers/acme-dns/
+* [Certify the Web acme-dns docs](https://docs.certifytheweb.com/docs/dns/providers/acme-dns/)
 

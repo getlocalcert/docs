@@ -17,7 +17,7 @@ You'll use your API key to update a DNS record as part of the certificate issuan
 ### JSON credentials file
 
 Several ACME clients support reading credentials from a JSON file.
-You can create one like:
+The standard format looks like:
 
 ``` json title="credentials.json"
 {

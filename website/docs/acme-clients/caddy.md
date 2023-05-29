@@ -48,11 +48,14 @@ If you're not using split view DNS, you can skip that line.
 <yourSubdomain>.localhostcert.net {
   tls {
     ca https://acme-staging-v02.api.letsencrypt.org/directory
-    resolvers ns1.getlocalcert.net:53
-    dns acmedns credentials.json
+    dns acmedns creds.json
   }
-  respond "Hello"
+  respond "Hello from Caddy"
 }
+```
+
+``` shell
+sudo ./caddy run
 ```
 
 Replace `<yourSubdomain>` with your subdomain name.
@@ -68,4 +71,10 @@ Run `sudo ./caddy run` again to issue a certificate.
 Now when you connect to `yourSubdomain`.localhostcert.net you should no longer see a certificate warning message.
 
 Caddy will manage your HTTPS certificate for you, automatically renewing your certificates before they expires.
+
+Check out the [Caddy docs](https://caddyserver.com/docs/) for more information about configuring and deploying Caddy.
+
+You can see our integration test example [here](https://github.com/robalexdev/getlocalcert-client-tests/tree/main/examples/caddy).
+
+[![Register and Issue using Caddy](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/caddy.yml/badge.svg)](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/caddy.yml)
 
