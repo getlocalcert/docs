@@ -58,24 +58,16 @@ Finally, you can remove the `--server` flag to switch to Let's Encrypt productio
 
 Follow the [LEGO docs](https://go-acme.github.io/lego/) to automate certificate renewal and copying the certificates to your web server.
 
+You can see our integration test example [here](https://github.com/robalexdev/getlocalcert-client-tests/blob/main/examples/lego-delegate-domain/issue-using-delegate.sh).
 
-## General Guidance
+[![Issue using delegate domain](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/lego-delegate.yml/badge.svg)](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/lego-delegate.yml)
 
-Let's say you'd like to issue certificates for `example.com` using the ACME DNS-01 process.
-You can use any ACME client that supports the ACME DNS-01 protocol, especially where the acme-dns DNS server is supported.
+## General guidance
 
-First, create a free subdomain on getlocalcert to use as the delegate.
-Create an API key for your newly created domain, and record the full domain name, API key, and API secret somewhere safe.
+Most ACME clients that support ACME-challenge delegate domains need little additional configuration to support getlocalcert domains.
+Importantly, you'll need to specify the API base endpoint as `https://api.getlocalcert.net/api/v1/acme-dns-compat`.
+Check your ACME clients documentation for more details.
 
-Next, add a `CNAME` record for `_acme-challenge` on example.com using your existing DNS provider.
-For example, if you registered your domain using namecheap and use their DNS service, add the CNAME using the namecheap web console:
-
-    _acme-challenge.example.com.    CNAME    yourSubdomain.localhostcert.net.
-
-You'll need to ask your ACME client to issue a certificate for example.com (and \*.example.com if you'd like), but provide the delegate domain in the DNS settings.
-Always start with the Let's Encrypt staging environment or [ZeroSSL](/cas/zerossl) to avoid getting rate limited.
-
-Check your ACME client's docs to configure automatic renewals and deploy the certificates to your web server.
 
 ## Security
 
