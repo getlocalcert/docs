@@ -99,6 +99,14 @@ services:
       - "traefik.http.services.whoami.loadbalancer.server.port=80"
 ```
 
+First issue a certificate with Let's Encrypt Staging
+(`caServer: https://acme-staging-v02.api.letsencrypt.org/directory`),
+which allows you to test that you've configured everything correctly.
+Once you're ready, switch to Let's Encrypt Production
+(`caServer: https://acme-v02.api.letsencrypt.org/directory`),
+or
+[another CA](https://docs.getlocalcert.net/cas/zerossl/).
+
 See also:
 
 * Check out [traefik documentation](https://doc.traefik.io/traefik/https/acme/#dnschallenge) to learn more about configuring and deploying traefik.

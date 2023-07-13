@@ -5,7 +5,7 @@ summary: You may be able to use getlocalcert.net as an alternative to these tech
 
 # Alternatives
 
-## Why not self-signed certificates?
+## Self-signed certificates
 
 Self-signed certificates are easy to set up, but provide poor user experience.
 When a user connects to a website using a self-signed certificate they'll see a warning message.
@@ -18,16 +18,16 @@ Second, users learn that clicking through certificate warning messages is an acc
 This means that users will be less suspicious if they see a self-signed certificate on other websites, like their bank's website.
 Clicking through those certificate warning messages could cause grave harm, including loss of money, loss of sensitive data, or system compromise.
 
-## Why not private CAs?
+## Private CAs
 
-Setting up a private CA is a popular improvement to self-signed certificates.
+Setting up a private certificate authority (CA) is a popular improvement to self-signed certificates.
 When properly configured the user should no longer see certificate warning messages.
 
 Unfortunately, this isn't a perfect solution either.
 Every operating system and web browser trust store must be updated to include the private CA.
 This can be a large amount of on-going work, especially for organizations with bring-your-own-device policies.
 If you miss any, then the user will see a warning message and you're back to the same issues you had with self-signed certificates.
-Even worse, a private CA is able to sign certificates for any domain name, even ones you don't own.
+Even worse, a private CA is often able to sign certificates for any domain name, even ones you don't own.
 This means that a hacker or disgruntled employee with access to the private CA can forge TLS certificates for any domain.
 
 Further, user-imported CA certs are handled in inconsistent and surprising ways.
@@ -40,7 +40,7 @@ Tooling for creating CA certs are often [missing important security features](ht
 
 Using a domain or subdomain you own is the best option.
 You'll be able to issue HTTPS certificates for your domain through a widely trusted CA, like the free Let's Encrypt service.
-You users will require no additional set up as Let's Encrypt is widely trust across all popular web browsers and operating systems.
+Your users will require no additional set up as Let's Encrypt is widely trust across all popular web browsers and operating systems.
 
-getlocalcert helps you achieve these benefits through our free and bring-your-own domain offerings.
+getlocalcert helps you achieve these benefits through our free subdomain and (planned) bring-your-own domain offerings.
 
