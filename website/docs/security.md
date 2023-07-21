@@ -9,14 +9,6 @@ summary: Security features and security model of getlocalcert.net
 
 Here's a number of ways getlocalcert's design protects your domain.
 
-### HTTPS only
-
-Our domains are pending addition to the [HSTS pre-load list](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security).
-HSTS instructs the web browser to require HTTPS when connecting.
-Invalid, self-signed, or expired certificates will block the user from connecting.
-Without HSTS a web browser may allow a user to decide if they want to connect anyway.
-With HSTS, there is no option to click through any certificate error messages.
-
 ### Scoped API keys
 
 Every web application using ACME DNS-01 will need an API key to update its `_acme-challenge` TXT record during the certificate issuance process.
@@ -65,4 +57,11 @@ These services track every certificate issuance and can notify you each time a c
 If you're using getlocalcert as an [external validation domain](/tips/validation-domain/) consider setting a CAA record.
 Let's Encrypt supports CAA records that restrict certificate issuance to a single Let's Encrypt account.
 This works sort of like two factor authentication, you'll need credentials for your Let's Encrypt account and an API key to update your DNS records.
+
+
+### HSTS headers
+
+Set [HSTS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) on your web server.
+HSTS instructs the web browser to require HTTPS when connecting.
+Invalid, self-signed, or expired certificates will block the user from connecting.
 
