@@ -5,10 +5,6 @@ summary: How to set up localcert.net domains
 
 # .localcert.net
 
-!!! warning "Unreleased"
-    
-    This feature has not been released yet.
-
 ## Use Case
 
 * You are running an private, internal web service that's only accessible on your local machine, local network, virtual private network, or other non-Internet network.
@@ -19,7 +15,6 @@ summary: How to set up localcert.net domains
 ## How it works
 
 You can register a free domain under `.localcert.net`.
-Free domains use short auto-generated names, like `abc.localcert.net`.
 
 Registration of a domain allows you to set the `_acme-challenge` TXT record for the domain.
 These records are used to issue TLS certificates using the ACME DNS-01 protocol.

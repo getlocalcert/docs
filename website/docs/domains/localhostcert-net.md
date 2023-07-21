@@ -14,7 +14,6 @@ summary: How to set up localhostcert.net domains
 ## How it works
 
 You can register a free domain under `.localhostcert.net`.
-Free domains use short auto-generated names, like `abc.localhostcert.net`.
 
 Registration of a domain allows you to set the `_acme-challenge` TXT record for the domain.
 These records are used to issue TLS certificates using the ACME DNS-01 protocol.
