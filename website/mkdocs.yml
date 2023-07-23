@@ -38,6 +38,8 @@ nav:
     - 'acme-clients/acme-sh.md'
     - 'acme-clients/certify-the-web.md'
   - 'Choosing a certificate authority':
+    - 'cas/index.md'
+    - 'cas/letsencrypt.md'
     - 'cas/zerossl.md'
   - 'Setting up DNS':
     - 'dns/index.md'
