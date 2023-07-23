@@ -16,12 +16,14 @@ theme:
       warning: octicons/alert-16
 
 plugins:
+  - section-index
   - search:
       lang: en
 
 nav:
   - 'index.md'
   - 'Available domains':
+    - 'domains/index.md'
     - 'domains/localcert-net.md'
     - 'domains/localhostcert-net.md'
     - 'domains/corpnet-work.md'

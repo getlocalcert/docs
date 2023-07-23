@@ -13,6 +13,7 @@ mkdocs==1.4.2
 mkdocs-gitbook==0.0.1
 mkdocs-material==9.0.2
 mkdocs-material-extensions==1.1.1
+mkdocs-section-index==0.3.5
 packaging==22.0
 Pygments==2.14.0
 pymdown-extensions==9.9
