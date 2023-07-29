@@ -12,3 +12,15 @@ You can usually avoid these by trying to issue certificates in the [staging envi
 
 Consider [ZeroSSL](../zerossl/) if you are a large organization or require additional services.
 
+## Endpoints
+
+When using Let's Encrypt you should first try issuing a certificate with the Staging environment.
+This avoids getting rate limited.
+Certificates created by the staging environment are not trusted by default on any browser, so you'll still see certificate warning messages, these are expected.
+
+    https://acme-staging-v02.api.letsencrypt.org/directory
+
+Once you've got that working, switch to Let's Encrypt Production which uses certificates that are widely trusted.
+
+    https://acme-v02.api.letsencrypt.org/directory
+

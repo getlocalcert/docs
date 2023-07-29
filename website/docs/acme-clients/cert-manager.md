@@ -50,16 +50,21 @@ Protect these files as they contain secrets.
 
 ## Issue a certificate
 
-``` yaml
+Install cert-manager in your cluster, then configure an issuer and a certificate.
+Edit the manifest below to include your email address in `email`
+and the domain name you registered in `dnsNames`.
+
+``` yaml title="my-certificate.yaml"
 apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
+kind: Issuer
 metadata:
-  name: example-issuer
+  name: le-staging-issuer
 spec:
   acme:
-    email: <email for notification>
+    email: me@example.com
     privateKeySecretRef:
-      name: <name of a secret used to store the ACME account private key>
+      name: cert-manager-demo-private-key
+    # Change this to Let's Encrypt production once you've validated your setup
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     solvers:
     - dns01:
@@ -68,6 +73,19 @@ spec:
           accountSecretRef:
             name: acme-dns
             key: cert-manager-creds.json
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cert-manager-test
+spec:
+  dnsNames:
+    - cert-manager-demo.localcert.net
+    # A wildcard cert as well (use quotes)
+    - "*.cert-manager-demo.localcert.net"
+  secretName: cert-manager-test
+  issuerRef:
+    name: le-staging-issuer
 ```
 
 !!! note
@@ -75,6 +93,24 @@ spec:
     The `cert-manager-creds.json` secret should go in the same namespace as the `Issuer` resource.
     If using a `ClusterIssuer`, then the `cert-manager-creds.json` secret should go in the same namespace as cert-manager.
 
+Configure the credentials and install the resources:
+
+    kubectl create secret generic acme-dns --from-file cert-manager-creds.json
+    kubectl apply -f my-certificate.yaml
+
+## Checking certificate status
+
+You can check if the certificate was issued using:
+
+    kubectl get certificate cert-manager-test
+
+If you're seeing issues, check a few other resources as well:
+
+    kubectl describe certificaterequest
+    kubectl describe issuer le-staging-issuer
+    kubectl describe challenge
+
+## Let's Encrypt environments
 
 First issue a certificate with Let's Encrypt Staging
 (`server: https://acme-staging-v02.api.letsencrypt.org/directory`),
@@ -84,8 +120,11 @@ Once you're ready, switch to Let's Encrypt Production
 or
 [another CA](https://docs.getlocalcert.net/cas/zerossl/).
 
-See also:
+## See also
 
+[![Register and Issue using cert-manager](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/cert-manager.yml/badge.svg)](https://github.com/robalexdev/getlocalcert-client-tests/actions/workflows/cert-manager.yml)
+
+* [Integration test example](https://github.com/robalexdev/getlocalcert-client-tests/tree/main/examples/cert-manager)
 * https://cert-manager.io/docs/configuration/acme/
 * https://cert-manager.io/docs/configuration/acme/dns01/acme-dns/
 
