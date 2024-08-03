@@ -9,11 +9,6 @@ summary: This is the documentation site for getlocalcert.net
 
 [getlocalcert.net](https://www.getlocalcert.net) lets you easily deploy Let's Encrypt HTTPS certificates to internal web apps.
 
-!!! warning "Early Access"
-    
-    getlocalcert is currently available for early access.
-    Feel free to try us out, but be aware that some breaking changes may occur and several known issues exist.
-
 [Get started for free](https://console.getlocalcert.net/){ .md-button .md-button--primary }
 
 Register a local-only domain name and automate issuance of domain verified certificates.
