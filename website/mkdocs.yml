@@ -1,6 +1,6 @@
-site_name: docs.getlocalcert.net
-site_url: https://docs.getlocalcert.net/
-site_description: Documentation for getlocalcert.net
+site_name: GetLocalCert Docs
+site_url: https://docs.getlocalcert.net
+site_description: Documentation for GetLocalCert
 
 theme:
   name: material
