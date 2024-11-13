@@ -1,9 +1,9 @@
-# getlocalcert Docs
+# GetLocalCert Docs
 
 ## Building
 
-    $ cd website
-    $ mkdocs build
-    $ mkdocs serve
-
-
+```
+cd website
+mkdocs build
+mkdocs serve
+```
