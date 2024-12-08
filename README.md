@@ -1,4 +1,4 @@
-# GetLocalCert Docs
+# LocalCert Docs
 
 ## Building
 
