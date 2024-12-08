@@ -1,13 +1,18 @@
 ---
 title: Documentation
-summary: This is the documentation site for getlocalcert.net
+summary: This is the documentation site for localcert.net
 ---
+
+# Migration
+We are currently in a migration period, where we are moving DNS resources to Cloudflare away from a self hosted instance of PowerDNS. DNS records may not deploy properly until we have completed this migration.
+
+If you experience any issues during this period, please email [support@localcert.net](mailto:support@localcert.net) and we will try our best to assist you.
 
 # About
 
 **Get valid HTTPS certificates for your local network in just ten minutes!**
 
-[getlocalcert.net](https://www.getlocalcert.net) lets you easily deploy Let's Encrypt HTTPS certificates to internal web apps.
+[localcert.net](https://localcert.net) lets you easily deploy Let's Encrypt HTTPS certificates to internal web apps.
 
 [Get started for free](https://console.getlocalcert.net/){ .md-button .md-button--primary }
 
@@ -28,4 +33,3 @@ This record is used during the Automated Certificate Management (ACME) DNS-01 pr
 By allowing the registrant to control this record, we support TLS certificate issuance even for systems that are not accessible from the Internet.
 
 Free certificates may be obtained from Let's Encrypt.
-

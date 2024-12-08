@@ -1,6 +1,6 @@
 ---
 title: Security
-summary: Security features and security model of getlocalcert.net
+summary: Security features and security model of localcert.net
 ---
 
 # Security

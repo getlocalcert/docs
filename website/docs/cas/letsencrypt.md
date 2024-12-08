@@ -1,6 +1,6 @@
 ---
 title: Let's Encrypt
-summary: How to set up Let's Encrypt with getlocalcert.net
+summary: How to set up Let's Encrypt with localcert.net
 ---
 
 # Let's Encrypt Setup

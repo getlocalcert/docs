@@ -1,6 +1,6 @@
 ---
 title: Managed DNS
-summary: How to configure getlocalcert.net on managed DNS domains
+summary: How to configure localcert.net on managed DNS domains
 ---
 
 !!! warning "Unreleased"

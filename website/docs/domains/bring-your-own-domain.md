@@ -1,6 +1,6 @@
 ---
 title: Bring your own domain
-summary: How to configure your existing domain on getlocalcert.net
+summary: How to configure your existing domain on localcert.net
 ---
 
 !!! warning "Unreleased"

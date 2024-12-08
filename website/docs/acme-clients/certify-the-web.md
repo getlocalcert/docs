@@ -1,6 +1,6 @@
 ---
 title: Certify The Web
-summary: How to integrate Certify The web with getlocalcert.net
+summary: How to integrate Certify The web with localcert.net
 ---
 
 # Certify The Web
@@ -15,7 +15,7 @@ click the add button.
 `acme-dns` as the DNS update method.
 3. Enter `https://api.getlocalcert.net/api/v1/acme-dns-compat` as the API Url
 4. Paste your [JSON credentials file](/acme-clients/#json-credentials-file)
-including your getlocalcert.net credentials.
+including your localcert.net credentials.
 This allows you to skip the acme-dns registration step the app would normally attempt.
 5. Click *Request Certificate* to save your settings and perform a
 certificate order.

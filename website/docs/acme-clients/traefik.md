@@ -1,6 +1,6 @@
 ---
 title: Traefik
-summary: How to integrate Traefik with getlocalcert.net
+summary: How to integrate Traefik with localcert.net
 ---
 
 # Traefik
@@ -105,7 +105,7 @@ which allows you to test that you've configured everything correctly.
 Once you're ready, switch to Let's Encrypt Production
 (`caServer: https://acme-v02.api.letsencrypt.org/directory`),
 or
-[another CA](https://docs.getlocalcert.net/cas/zerossl/).
+[another CA](https://docs.localcert.net/cas/zerossl/).
 
 See also:
 

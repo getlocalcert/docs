@@ -1,6 +1,6 @@
 ---
 title: Caddy
-summary: How to integrate Caddy with getlocalcert.net
+summary: How to integrate Caddy with localcert.net
 ---
 
 # Caddy
@@ -40,7 +40,7 @@ Note: the second `--with` is a workaround for [a known issue](https://github.com
 As you begin, start with Let's Encrypt's staging environment as the `ca`.
 Let's Encrypt's production environment has [rate limits](https://letsencrypt.org/docs/rate-limits/), so it's best to avoid using it until you've tested in the staging environment.
 
-If you're using split view DNS, set `resolvers` to an external DNS server (like Google's `8.8.8.8:53`) or the getlocalcert.net DNS server (`ns1.getlocalcert.net`).
+If you're using split view DNS, set `resolvers` to an external DNS server (like Google's `8.8.8.8:53`) or the localcert.net DNS server (`ns1.localcert.net`).
 Otherwise, Caddy won't be able to see that the TXT records have been set and it won't proceed with certificate issuance.
 If you're not using split view DNS, you can skip that line.
 

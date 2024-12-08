@@ -1,6 +1,6 @@
 ---
 title: Alternatives
-summary: You may be able to use getlocalcert.net as an alternative to these technologies
+summary: You may be able to use localcert.net as an alternative to these technologies
 ---
 
 # Alternatives

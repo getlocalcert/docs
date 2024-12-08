@@ -1,6 +1,6 @@
 ---
 title: General DNS guidance
-summary: How to manage DNS with getlocalcert.net
+summary: How to manage DNS with localcert.net
 ---
 
 # General guidance

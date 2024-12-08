@@ -1,6 +1,6 @@
 ---
 title: ACME clients
-summary: How to configure ACME clients for getlocalcert.net
+summary: How to configure ACME clients for localcert.net
 ---
 
 # General guidance

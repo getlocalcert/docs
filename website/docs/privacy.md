@@ -16,9 +16,9 @@ Here's how.
 
 This policy applies to the following websites:
 
-* console.getlocalcert.net (the Console)
-* docs.getlocalcert.net (the Docs)
-* www.getlocalcert.net (the Marketing Site)
+* console.getlocalcert.net (the console)
+* docs.localcert.net (the documentation)
+* localcert.net (the marketing homepage)
 
 Collectively, referred to as the Service.
 
@@ -80,10 +80,8 @@ We use the following service providers:
 * [GitHub](https://github.com/) - Login with GitHub
 * [jsDelivr](https://www.jsdelivr.com/) - A content distribution network (CDN) we use for CSS files
 
-## GoatCounter
-
-The Docs and Marketing Site use GoatCounter to track page views.
-Please review the [GoatCounter docs](https://github.com/arp242/goatcounter/blob/master/docs/sessions.markdown) to see the collected information.
+# Plausible
+The marketing site uses self-hosted [Plausible Analytics](https://plausible.io).
 
 ## Information from children
 
@@ -105,5 +103,5 @@ We hope that the Service's design and policies reduce the need for such requests
 
 ## Contact
 
-If you have any questions, please [let us know](https://docs.getlocalcert.net/contact/).
+If you have any questions, please [let us know](https://docs.localcert.net/contact/).
 

@@ -1,15 +1,15 @@
 openapi: 3.1.0
 info:
-  title: getlocalcert.net API
+  title: localcert.net API
   description: |-
-    This is the API specification for the getlocalcert.net service
+    This is the API specification for the localcert.net service
 
   contact:
-    email: support@getlocalcert.net
+    email: support@localcert.net
   version: 1.0.0
 externalDocs:
   description: Documentation
-  url: https://docs.getlocalcert.net/
+  url: https://docs.localcert.net/
 servers:
   - url: https://api.getlocalcert.net
   - url: http://api.getlocalcert.net

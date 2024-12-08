@@ -1,6 +1,6 @@
 ---
 title: Let's Encrypt Go (LEGO)
-summary: How to integrate Let's Encrypt Go (LEGO) with getlocalcert.net
+summary: How to integrate Let's Encrypt Go (LEGO) with localcert.net
 ---
 
 # LEGO

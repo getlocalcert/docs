@@ -1,6 +1,6 @@
 ---
 title: FAQ
-summary: Frequently asked questions (FAQ) about getlocalcert.net
+summary: Frequently asked questions (FAQ) about localcert.net
 ---
 
 # Frequently Asked Questions

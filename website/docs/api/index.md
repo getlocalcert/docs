@@ -1,6 +1,6 @@
 ---
 title: API
-summary: The API specification for getlocalcert.net
+summary: The API specification for localcert.net
 ---
 
 # API Specification
