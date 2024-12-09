@@ -64,7 +64,7 @@ markdown_extensions:
   - pymdownx.superfences
   - footnotes
 
-copyright: &copy; 2023-24 LocalCert - All Rights Reserved.
+copyright: "&copy; LocalCert - All Rights Reserved."
 
 extra:
   generator: false
