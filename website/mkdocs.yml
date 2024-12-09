@@ -4,7 +4,6 @@ site_description: Documentation for GetLocalCert
 
 theme:
   name: material
-  custom_dir: overrides
   language: en
   font: false
   features:
